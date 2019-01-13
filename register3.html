@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fewd</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/site.min.css"
+    />
+
+    <style>
+      body,
+      html,
+      p {
+        height: 100%;
+        margin: 0;
+      }
+
+      p {
+        margin: 0 auto;
+        width: 50%;
+        background: aqua;
+      }
+
+      h4 {
+        margin: 0;
+      }
+
+      label {
+        vertical-align: baseline;
+      }
+
+      div {
+        label {
+          input {
+            vertical-align: middle;
+            width: 50%;
+          }
+        }
+      }
+
+      .title3 {
+        margin: auto;
+        max-width: 50%;
+        background: darkgray;
+        font-size: 30pt;
+      }
+
+      .tall {
+        background: gray;
+        color: black;
+        height: 100%;
+        width: 800px;
+        margin: 0 auto;
+        font-size: 20pt;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="title3">
+      <h1>Foodar</h1>
+      <div class="tall">
+        <form>
+          <h2>Register</h2>
+          <p>Please fill out the form below:</p>
+          <div>
+            <fieldset>
+              <h3>Details:</h3>
+              <div>
+                <label
+                  >Email address:
+                  <input
+                    type="text"
+                    name="username"
+                    value="youremail@address.com"
+                  />
+                </label>
+                <br />
+
+                <label
+                  >Password:
+                  <input type="password" name="password" value="Password" />
+                </label>
+                <br />
+
+                <label
+                  >First Name:
+                  <input type="text" name="firstname" value="Jack" />
+                </label>
+                <br />
+
+                <label
+                  >Last Name:
+                  <input type="text" name="lastname" value="Reacher" />
+                </label>
+                <br />
+              </div>
+            </fieldset>
+            <br />
+          </div>
+
+          <div>
+            <fieldset>
+              <h3>Address:</h3>
+              <label
+                >Address: <input type="text" name="address" value="1776" />
+              </label>
+              <br />
+
+              <label
+                >Street:
+                <input type="text" name="street" value="Presidential Avenue" />
+              </label>
+              <br />
+
+              <label
+                >City: <input type="text" name="city" value="Washington, DC" />
+              </label>
+              <br />
+
+              <label
+                >Zipcode: <input type="text" name="zipcode" value="12345" />
+              </label>
+            </fieldset>
+            <br />
+            <button type="submit">Register</button> <br />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
