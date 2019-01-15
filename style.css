@@ -1,8 +1,102 @@
 body {
-  background-color: lightblue;
+  background-color: lightgray;
 }
 
 h1 {
   color: navy;
   margin-left: 20px;
+}
+
+div {
+  vertical-align: middle;
+  width: 50%;
+}
+
+.text {
+  color: red;
+  margin: auto;
+  width: 50%;
+}
+
+.signin {
+  color: green;
+  text-align: right;
+  width: 100%;
+}
+
+.guy {
+  margin: auto;
+  width: 46%;
+  height: 46%;
+}
+
+.snippet {
+  font-size: 12pt;
+  h2 {
+    font-size: 20pt;
+  }
+}
+
+.title2 {
+  font-size: 35pt;
+}
+
+.links {
+  column-count: 3;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: yellow;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  text-shadow: 1px 1px 1px red;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+  font-size: 12pt;
+}
+
+a:link {
+  text-decoration: none;
+  color: orange;
+}
+
+a:visited {
+  color: darkred;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.pp {
+  font-size: 12pt;
+}
+
+.custom_form {
+  column-count: 3;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.child {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
