@@ -3,15 +3,16 @@
   <head>
     <title>Make Request</title>
     <link rel="stylesheet" href="./style.css" type="text/css" />
+    <script type="text/javascript"></script>
   </head>
-  <style></style>
+
   <body>
     <div class="title2"><p>SUBMIT YOUR REQUEST</p></div>
     <div>
       <h3>Please fill out the form below.</h3>
 
       <form action="index.html" method="post">
-        <div class="parent">
+        <div>
           <label
             >Address:
             <div>
@@ -22,79 +23,70 @@
               /></div
           ></label>
         </div>
-
-        <div>
-          <h3>Choose Your Style:</h3>
-          <table>
-            <td>
-              <div class="custom_form">
-                <div>
-                  <input
-                    type="radio"
-                    name="classic"
-                    checked="checked"
-                    value="3"
-                  />
-                  <label>This is a classic treatment</label>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div>
-                <input type="radio" name="premium" value="5" />
-                <label>Pinky's up</label>
-              </div>
-            </td>
-            <td>
-              <div>
-                <input type="radio" name="royal" value="10" />
-                <label
-                  >Your food is served on a silver platter. Literally.</label
-                >
-              </div>
-            </td>
-          </table>
-        </div>
-        <br />
-        <div>
-          <label
-            >Restaurant:
-            <div>
-              <input
-                type="text"
-                name="restaurant"
-                placeholder="Bucca di Beppo's"
-              />
-            </div>
-          </label>
-        </div>
-        <div>
-          <h3>Tip:</h3>
-          <div class="custom_form">
-            <div>
-              <input type="radio" name="10%" checked="checked" />
-              <label>10% - They did their job</label>
-            </div>
-          </div>
-
-          <div>
-            <input type="radio" name="15%" />
-            <label>15% - They made you feel special</label>
-          </div>
-
-          <div>
-            <input type="radio" name="20%" />
-            <label
-              >20% - I wanna give them more, but this is all the app will let
-              me!</label
-            >
-          </div>
-        </div>
-        <br />
-        <input type="submit" value="REQUEST" />
       </form>
+
+      <div>
+        <form action="index.html" method="post">
+          <h3>Choose Your Style:</h3>
+
+          <div class="parent">
+            <input type="radio" name="classic" checked="checked" id="classic" />
+            <label>This is a classic treatment</label>
+          </div>
+
+          <div class="parent">
+            <input type="radio" name="premium" id="premium" />
+            <label>Pinky's up</label>
+          </div>
+
+          <div class="parent">
+            <input type="radio" name="royal" id="royal" />
+            <label>Your food is served on a silver platter. Literally.</label>
+          </div>
+        </form>
+      </div>
+      <br />
+      <div>
+        <label
+          >Restaurant:
+          <div>
+            <input
+              type="text"
+              name="restaurant"
+              placeholder="Bucca di Beppo's"
+            />
+          </div>
+        </label>
+      </div>
+      <div>
+        <h3>Tip:</h3>
+
+        <div class="parent">
+          <input type="radio" name="10%" checked="checked" />
+          <label>10% - They did their job</label>
+        </div>
+
+        <div class="parent">
+          <input type="radio" name="15%" />
+          <label>15% - They made you feel special</label>
+        </div>
+
+        <div class="parent">
+          <input type="radio" name="20%" />
+          <label
+            >20% - I wanna give them more, but this is all the app will let
+            me!</label
+          >
+        </div>
+      </div>
+      <br />
+      <input type="submit" value="REQUEST" />
     </div>
     <hr />
+    <script>
+      var elem = document.getElementById("premium");
+      console.log(elem);
+    </script>
   </body>
 
   <footer>
