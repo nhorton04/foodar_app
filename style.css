@@ -7,10 +7,10 @@ h1 {
   margin-left: 20px;
 }
 
-div {
+/* div {
   vertical-align: middle;
   width: 50%;
-}
+} */
 
 .text {
   color: red;
@@ -101,6 +101,15 @@ a:hover {
   padding-bottom: 20px;
 }
 
-.parent {
+.column {
+  width: 33%;
+  padding: 10px;
   border-style: outset;
+  display: inline;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

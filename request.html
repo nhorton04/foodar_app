@@ -28,20 +28,24 @@
       <div>
         <form action="index.html" method="post">
           <h3>Choose Your Style:</h3>
+          <div class="row">
+            <div class="column">
+              <input type="radio" name="classic" id="classic" value="3" />
+              <label>Classic - This is a classic treatment.</label>
+            </div>
 
-          <div class="parent">
-            <input type="radio" name="classic" checked="checked" id="classic" />
-            <label>This is a classic treatment</label>
-          </div>
+            <div class="column">
+              <input type="radio" name="premium" id="premium" value="5" />
+              <label>Premium - Pinky's up!</label>
+            </div>
 
-          <div class="parent">
-            <input type="radio" name="premium" id="premium" />
-            <label>Pinky's up</label>
-          </div>
-
-          <div class="parent">
-            <input type="radio" name="royal" id="royal" />
-            <label>Your food is served on a silver platter. Literally.</label>
+            <div class="column">
+              <input type="radio" name="royal" id="royal" value="10" />
+              <label
+                >Royal - Your food is served on a silver platter.
+                Literally.</label
+              >
+            </div>
           </div>
         </form>
       </div>
@@ -61,18 +65,18 @@
       <div>
         <h3>Tip:</h3>
 
-        <div class="parent">
-          <input type="radio" name="10%" checked="checked" />
+        <div class="column">
+          <input type="radio" name="10%" id="10" />
           <label>10% - They did their job</label>
         </div>
 
-        <div class="parent">
-          <input type="radio" name="15%" />
+        <div class="column">
+          <input type="radio" name="15%" id="15" />
           <label>15% - They made you feel special</label>
         </div>
 
-        <div class="parent">
-          <input type="radio" name="20%" />
+        <div class="column">
+          <input type="radio" name="20%" id="20" />
           <label
             >20% - I wanna give them more, but this is all the app will let
             me!</label
@@ -80,13 +84,42 @@
         </div>
       </div>
       <br />
-      <input type="submit" value="REQUEST" />
+      <button onclick="myFunction()">REQUEST</button>
     </div>
     <hr />
     <script>
-      var elem = document.getElementById("premium");
-      console.log(elem);
+      // var classic = document.getElementById("classic");
+      // var premium = document.getElementById("premium");
+      // var royal = document.getElementById("royal");
+      //
+      // var value = 0;
+      //
+      // if (classic.checked) {
+      //   value = classic.value;
+      // } else if (premium.checked) {
+      //   value = premium.value;
+      // } else if (royal.checked) {
+      //   value = royal.value;
+      // }
+      // console.log(value);
+      // var ten = document.getElementById("10");
+      // var fifteen = document.getElementById("15");
+      // var twenty = document.getElementById("20");
+      //
+      // if (ten.checked) {
+      //   value = value + (value * 0.1);
+      // } else if (fifteen.checked) {
+      //   value = value + (value * 0.15);
+      // } else if (twenty.checked) {
+      //   value = value + (value * 0.2);
+      // }
+
+      console.log(value);
+      // setInterval(function() {
+      //   alert(`Your total cost is $${value}`);
+      // }, 3000);
     </script>
+    <p>:)</p>
   </body>
 
   <footer>
