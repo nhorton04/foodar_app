@@ -88,38 +88,37 @@
     </div>
     <hr />
     <script>
-      // var classic = document.getElementById("classic");
-      // var premium = document.getElementById("premium");
-      // var royal = document.getElementById("royal");
-      //
-      // var value = 0;
-      //
-      // if (classic.checked) {
-      //   value = classic.value;
-      // } else if (premium.checked) {
-      //   value = premium.value;
-      // } else if (royal.checked) {
-      //   value = royal.value;
-      // }
-      // console.log(value);
-      // var ten = document.getElementById("10");
-      // var fifteen = document.getElementById("15");
-      // var twenty = document.getElementById("20");
-      //
-      // if (ten.checked) {
-      //   value = value + (value * 0.1);
-      // } else if (fifteen.checked) {
-      //   value = value + (value * 0.15);
-      // } else if (twenty.checked) {
-      //   value = value + (value * 0.2);
-      // }
+      var classic = document.getElementById("classic");
+      var premium = document.getElementById("premium");
+      var royal = document.getElementById("royal");
+
+      var value = 0;
+
+      if (classic.checked) {
+        value = classic.value;
+      } else if (premium.checked) {
+        value = premium.value;
+      } else if (royal.checked) {
+        value = royal.value;
+      }
+      console.log(value);
+      var ten = document.getElementById("10");
+      var fifteen = document.getElementById("15");
+      var twenty = document.getElementById("20");
+
+      if (ten.checked) {
+        value = value + value * 0.1;
+      } else if (fifteen.checked) {
+        value = value + value * 0.15;
+      } else if (twenty.checked) {
+        value = value + value * 0.2;
+      }
 
       console.log(value);
       // setInterval(function() {
       //   alert(`Your total cost is $${value}`);
       // }, 3000);
     </script>
-    <p>:)</p>
   </body>
 
   <footer>
