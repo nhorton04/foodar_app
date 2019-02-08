@@ -84,16 +84,18 @@
         </div>
       </div>
       <br />
+      <div id="container"></div>
       <button onclick="myFunction()">REQUEST</button>
     </div>
     <hr />
     <script>
-      document.getElementById("form_id").addEventListener("change", function() {
+      function myFunction() {
         var classic = document.getElementById("classic");
         var premium = document.getElementById("premium");
         var royal = document.getElementById("royal");
 
-        var value = 0;
+        var value = null;
+        var new_value = null;
 
         if (classic.checked) {
           value = classic.value;
@@ -102,25 +104,23 @@
         } else if (royal.checked) {
           value = royal.value;
         }
-        console.log(value);
+        console.log(`1. The value is ${value}`);
+
         var ten = document.getElementById("10");
         var fifteen = document.getElementById("15");
         var twenty = document.getElementById("20");
 
         if (ten.checked) {
-          value = value + value * 0.1;
+          new_value = (value + (value * 0.1))/10;
         } else if (fifteen.checked) {
-          value = value + value * 0.15;
+          new_value = (value + (value * 0.15))/10;
         } else if (twenty.checked) {
-          value = value + value * 0.2;
+          new_value = (value + (value * 0.2))/10;
         }
 
-        console.log(value);
-
-        setInterval(function() {
-          alert(`Your total cost is $${value}`);
-        }, 3000);
-      });
+        console.log(`2. The value is ${new_value}`);
+        alert(`Your total cost is $${new_value}`);
+      }
     </script>
   </body>
 
