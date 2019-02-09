@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scripting setInterval</title>
+  </head>
+  <body>
+    <!-- <button id="clear">Paüs</button> -->
+    <div id="banner"></div>
+  </body>
+  <script>
+    function ad() {
+      var div = document.getElementById("banner");
+      var elem = document.createElement("h2");
+
+      elem.innerHTML = "hello";
+
+      div.appendChild(elem);
+    }
+    setTimeout(ad, 5000);
+  </script>
+</html>

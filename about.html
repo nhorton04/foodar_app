@@ -4,13 +4,56 @@
     <title>About Foodar</title>
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
       .links {
         display: inline-block;
       }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .close {
+        cursor: pointer;
+        position: static;
+        transform: translate(0%, -1450%);
+      }
+
+      .close:hover {
+        background: #bbb;
+      }
     </style>
+    <script>
+      function myFunc() {
+        var closebtns = document.getElementsByClassName("close");
+        console.log(closebtns);
+
+        for (var i = 0; i < closebtns.length; i++) {
+          console.log(closebtns[i]);
+          closebtns[i].addEventListener("click", function() {
+            this.parentElement.style.display = "none";
+          });
+        }
+      }
+    </script>
   </head>
 
   <body>
+    <ul>
+      <li>
+        <img src="http://webmeup.com/upload/blog/mc_banner.jpg" /><button
+          class="close"
+          onclick="myFunc()"
+        >
+          x
+        </button>
+      </li>
+    </ul>
     <h1>Foodar</h1>
     <br />
     <h1>How it works!</h1>
@@ -57,6 +100,6 @@
     <br />
     <br />
     <br />
-    <p>&copy; Nick's Sites 2019</p>
+    <p>Nicks Sites 2019</p>
   </footer>
 </html>
