@@ -9,13 +9,14 @@
   </body>
   <script>
     function ad() {
-      var div = document.getElementById("banner");
-      var elem = document.createElement("h2");
+      var elem = document.createElement("IMG");
+      elem.setAttribute("src", "http://webmeup.com/upload/blog/mc_banner.jpg");
+      elem.setAttribute("width", "304");
+      elem.setAttribute("height", "100");
+      elem.setAttribute("alt", "pic");
 
-      elem.innerHTML = "hello";
-
-      div.appendChild(elem);
+      document.body.appendChild(elem);
     }
-    setTimeout(ad, 5000);
+    setTimeout(ad, 500);
   </script>
 </html>

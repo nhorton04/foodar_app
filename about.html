@@ -29,6 +29,20 @@
       }
     </style>
     <script>
+      function ad() {
+        var elem = document.createElement("IMG");
+        var spans = document.getElementById("banner");
+        elem.setAttribute(
+          "src",
+          "http://webmeup.com/upload/blog/mc_banner.jpg"
+        );
+        elem.setAttribute("width", "600");
+        elem.setAttribute("height", "200");
+        elem.setAttribute("alt", "pic");
+
+        document.body.replaceChild(elem, spans);
+      }
+      setTimeout(ad, 500);
       function myFunc() {
         var closebtns = document.getElementsByClassName("close");
         console.log(closebtns);
@@ -44,16 +58,7 @@
   </head>
 
   <body>
-    <ul>
-      <li>
-        <img src="http://webmeup.com/upload/blog/mc_banner.jpg" /><button
-          class="close"
-          onclick="myFunc()"
-        >
-          x
-        </button>
-      </li>
-    </ul>
+    <span id="banner"></span>
     <h1>Foodar</h1>
     <br />
     <h1>How it works!</h1>
