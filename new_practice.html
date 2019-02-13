@@ -3,5 +3,61 @@
   <head>
     <title>Pic Page</title>
   </head>
-  <body></body>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <style>
+    #note {
+      background: #819c9a;
+      height: 200px;
+      width: 150px;
+      border: 2px solid;
+      border-radius: 25px;
+      border-color: #49706e;
+      margin: 10px;
+    }
+    #note_in {
+      float: left;
+      height: 35px;
+      width: 150px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    #note_in2 {
+      float: right;
+      height: 25px;
+      width: 25px;
+      margin: 5px;
+      background: #9dccca;
+      border-radius: 15px;
+      text-align: center;
+      cursor: pointer;
+    }
+    #ex {
+      margin-top: 4px;
+    }
+  </style>
+  <body>
+    <button onClick="openNote();">Press me!</button>
+  </body>
+  <script>
+    function openNote() {
+      var base = document.createElement("div");
+      base.id = "note";
+      var in_ = document.createElement("div");
+      in_.id = "note_in";
+      var in_2 = document.createElement("div");
+      in_2.id = "note_in2";
+      var ex = document.createElement("div");
+      ex.id = "ex";
+      var ext = document.createTextNode("X");
+
+      base.appendChild(in_);
+      in_.appendChild(in_2);
+      in_2.appendChild(ex);
+      ex.appendChild(ext);
+      document.body.appendChild(base);
+
+      ex.onclick = function() {
+        base.parentNode.removeChild(base);
+      };
+    }
+  </script>
 </html>
