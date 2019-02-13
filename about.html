@@ -13,7 +13,7 @@
       }
 
       ul {
-        list-style-type: none;
+        list-style-type: disc;
         padding: 0;
         margin: 0;
       }
@@ -21,11 +21,20 @@
       .close {
         cursor: pointer;
         position: static;
-        transform: translate(0%, -1450%);
+        transform: translate(2650%, -1150%);
       }
 
       .close:hover {
         background: #bbb;
+      }
+      #xButton {
+        float: right;
+        display: none;
+        transform: translate(0%, 0%);
+      }
+
+      .showBanner {
+        width: 50%;
       }
     </style>
     <script>
@@ -42,7 +51,7 @@
 
         document.body.replaceChild(elem, spans);
       }
-      setTimeout(ad, 5000);
+      setTimeout(ad, 500);
       function myFunc() {
         var closebtns = document.getElementsByClassName("close");
         console.log(closebtns);
@@ -58,7 +67,16 @@
   </head>
 
   <body>
-    <span id="banner"></span>
+    <span id="banner"> </span>
+    <div id="removable">
+      <button onclick="closeImg()" id="xButton">x</button>
+    </div>
+    <!--
+      <ul>
+        <li><button class="close" onclick="myFunc()">x</button></li>
+      </ul>
+    -->
+
     <h1>Foodar</h1>
     <br />
     <h1>How it works!</h1>

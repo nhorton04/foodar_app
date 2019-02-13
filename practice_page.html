@@ -4,8 +4,13 @@
     <title>Scripting setInterval</title>
   </head>
   <body>
-    <!-- <button id="clear">Paüs</button> -->
-    <div id="banner"></div>
+    <div id="extra">
+      <div id="removable">
+        <span id="banner">
+          <button onclick="closeImg()" id="xButton">x</button></span
+        >
+      </div>
+    </div>
   </body>
   <script>
     function ad() {
@@ -18,5 +23,11 @@
       document.body.appendChild(elem);
     }
     setTimeout(ad, 500);
+
+    function closeImg() {
+      var b = document.getElementById("extra");
+      var b_nested = document.getElementById("removable");
+      b.remove();
+    }
   </script>
 </html>
