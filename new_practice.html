@@ -6,26 +6,26 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
   <style>
     #note {
-      background: #819c9a;
-      height: 200px;
-      width: 150px;
+      background: lightgray;
+      height: 350px;
+      width: 700px;
       border: 2px solid;
       border-radius: 25px;
-      border-color: #49706e;
+      border-color: lightgray;
       margin: 10px;
     }
     #note_in {
-      float: left;
-      height: 35px;
-      width: 150px;
-      background: rgba(255, 255, 255, 0.2);
+      float: center;
+      height: 30px;
+      width: 700px;
+      background-color: lightgray;
     }
     #note_in2 {
       float: right;
       height: 25px;
       width: 25px;
       margin: 5px;
-      background: #9dccca;
+      background: lightgray;
       border-radius: 15px;
       text-align: center;
       cursor: pointer;
@@ -43,6 +43,8 @@
       base.id = "note";
       var in_ = document.createElement("div");
       in_.id = "note_in";
+      var out_ = document.createElement("IMG");
+      out_.src = "http://webmeup.com/upload/blog/mc_banner.jpg";
       var in_2 = document.createElement("div");
       in_2.id = "note_in2";
       var ex = document.createElement("div");
@@ -50,6 +52,7 @@
       var ext = document.createTextNode("X");
 
       base.appendChild(in_);
+      base.appendChild(out_);
       in_.appendChild(in_2);
       in_2.appendChild(ex);
       ex.appendChild(ext);
