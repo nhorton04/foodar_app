@@ -3,12 +3,42 @@
   <head>
     <title>Foodar</title>
     <link rel="stylesheet" href="./style.css" type="text/css" />
-    <style></style>
+    <style>
+      #note {
+        background: lightgray;
+        height: 350px;
+        width: 700px;
+        border: 2px solid;
+        border-radius: 25px;
+        border-color: lightgray;
+        margin: 10px;
+      }
+      #note_in {
+        float: center;
+        height: 30px;
+        width: 700px;
+        background-color: lightgray;
+      }
+      #note_in2 {
+        float: right;
+        height: 25px;
+        width: 25px;
+        margin: 5px;
+        background: lightgray;
+        border-radius: 15px;
+        text-align: center;
+        cursor: pointer;
+        transform: translate(-15%, 120%);
+      }
+      #ex {
+        margin-top: 4px;
+      }
+    </style>
   </head>
   <body>
+    <span id="replace"></span>
     <div class="ui segment">
       <br />
-      <p class="text">http://www.advertisement.com/5005159</p>
       <br />
       <br />
       <hr />
@@ -32,13 +62,49 @@
         </p>
       </div>
       <form action="index.html" method="post">
-        <input type="text" name="zipcode" value="90210" maxlength="5" />
-        <input type="submit" value="Submit" />
+        <input type="text" name="zipcode" maxlength="5" id="zipcode" />
+        <input type="submit" value="Submit" onclick="zipcodeChecker()" />
       </form>
       <hr />
     </div>
   </body>
+  <script>
+    function zipcodeChecker(zipcode) {
+      let zipcodes = [92009, 94605, 90210, 93117, 92024];
+      if (zipcodes.indexOf(zipcode) > -1) {
+        alert("We've got your area covered!");
+      } else {
+        alert("Sorry, we haven't expanded to that area yet.");
+      }
+    }
+    function openNote() {
+      var replace = document.getElementById("replace");
+      var base = document.createElement("div");
+      base.id = "note";
+      var in_ = document.createElement("div");
+      in_.id = "note_in";
+      var out_ = document.createElement("IMG");
+      out_.src = "http://webmeup.com/upload/blog/mc_banner.jpg";
+      var in_2 = document.createElement("div");
+      in_2.id = "note_in2";
+      var ex = document.createElement("div");
+      ex.id = "ex";
+      var ext = document.createTextNode("X");
 
+      base.appendChild(in_);
+      base.appendChild(out_);
+      in_.appendChild(in_2);
+      in_2.appendChild(ex);
+      ex.appendChild(ext);
+      document.body.insertBefore(base, replace);
+
+      ex.onclick = function() {
+        base.parentNode.removeChild(base);
+      };
+    }
+
+    setTimeout(openNote, 5000);
+  </script>
   <footer>
     <div class="links">
       <ul style="list-style-type:none">
