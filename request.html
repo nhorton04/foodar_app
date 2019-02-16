@@ -30,17 +30,35 @@
           <h4>Choose Your Style:</h4>
           <div class="row">
             <div class="column">
-              <input type="radio" name="classic" id="classic" value="3" />
+              <input
+                type="radio"
+                name="classic"
+                id="classic"
+                value="3"
+                onclick="styleFunc()"
+              />
               <label>Classic - This is a classic treatment.</label>
             </div>
 
             <div class="column">
-              <input type="radio" name="premium" id="premium" value="5" />
+              <input
+                type="radio"
+                name="premium"
+                id="premium"
+                value="5"
+                onclick="styleFunc()"
+              />
               <label>Premium - Pinky's up!</label>
             </div>
 
             <div class="column">
-              <input type="radio" name="royal" id="royal" value="10" />
+              <input
+                type="radio"
+                name="royal"
+                id="royal"
+                value="10"
+                onclick="styleFunc()"
+              />
               <label
                 >Royal - Your food is served on a silver platter.
                 Literally.</label
@@ -66,17 +84,32 @@
         <h3>Tip:</h3>
 
         <div class="column">
-          <input type="radio" name="10%" id="10" onclick="myFunction()" />
+          <input
+            type="radio"
+            name="10%"
+            id="10"
+            onclick="clearFunc(); myFunction()"
+          />
           <label>10% - They did their job</label>
         </div>
 
         <div class="column">
-          <input type="radio" name="15%" id="15" onclick="myFunction()" />
+          <input
+            type="radio"
+            name="15%"
+            id="15"
+            onclick="clearFunc(); myFunction()"
+          />
           <label>15% - They made you feel special</label>
         </div>
 
         <div class="column">
-          <input type="radio" name="20%" id="20" onclick="myFunction()" />
+          <input
+            type="radio"
+            name="20%"
+            id="20"
+            onclick="clearFunc(); myFunction()"
+          />
           <label
             >20% - I wanna give them more, but this is all the app will let
             me!</label
@@ -84,13 +117,48 @@
         </div>
       </div>
       <br />
-      <div id="container"></div>
-      <button onclick="myFunction()">REQUEST</button>
+      <div id="outer"><div id="container"></div></div>
+      <div id="other_container"></div>
+      <div id="confirmation"></div>
+      <button onclick="confirm()">REQUEST</button>
     </div>
     <hr />
     <script>
-      function myFunction() {
+      function styleFunc() {
         var div = document.getElementById("container");
+        if (div !== null) {
+          var classic = document.getElementById("classic");
+          var premium = document.getElementById("premium");
+          var royal = document.getElementById("royal");
+
+          var value = null;
+          var new_value = null;
+          var total = document.createElement("h2");
+
+          if (classic.checked) {
+            value = classic.value;
+          } else if (premium.checked) {
+            value = premium.value;
+          } else if (royal.checked) {
+            value = royal.value;
+          }
+
+          total.innerHTML = `Total:  $${value}`;
+          div.appendChild(total);
+          console.log(`2. The value is ${value}`);
+          // alert(`Your total cost is $${new_value}`);
+        }
+      }
+
+      function clearFunc() {
+        let d = document.getElementById("outer");
+        let d_nested = document.getElementById("container");
+        d.removeChild(d_nested);
+      }
+
+      function myFunction() {
+        var div = document.getElementById("other_container");
+        console.log(div);
         if (div !== null) {
           var classic = document.getElementById("classic");
           var premium = document.getElementById("premium");
@@ -126,6 +194,47 @@
           div.appendChild(total);
           console.log(`2. The value is ${new_value}`);
           // alert(`Your total cost is $${new_value}`);
+        }
+      }
+      function confirm() {
+        var div = document.getElementById("other_container");
+        console.log(div);
+        if (div !== null) {
+          var classic = document.getElementById("classic");
+          var premium = document.getElementById("premium");
+          var royal = document.getElementById("royal");
+
+          var value = null;
+          var new_value = null;
+          var total = document.createElement("h2");
+
+          if (classic.checked) {
+            value = classic.value;
+          } else if (premium.checked) {
+            value = premium.value;
+          } else if (royal.checked) {
+            value = royal.value;
+          }
+          console.log(`1. The value is ${value}`);
+          var tru_value = parseFloat(value);
+
+          var ten = document.getElementById("10");
+          var fifteen = document.getElementById("15");
+          var twenty = document.getElementById("20");
+
+          if (ten.checked) {
+            new_value = tru_value + tru_value * 0.1;
+          } else if (fifteen.checked) {
+            new_value = tru_value + tru_value * 0.15;
+          } else if (twenty.checked) {
+            new_value = tru_value + tru_value * 0.2;
+          }
+
+          var div = document.getElementById("confirmation");
+          var confirm = document.createElement("h3");
+
+          confirm.innerHTML = `Order Submitted for $${new_value}`;
+          div.appendChild(confirm);
         }
       }
     </script>
