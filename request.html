@@ -158,7 +158,7 @@
 
       function myFunction() {
         var div = document.getElementById("other_container");
-        console.log(div);
+        // console.log(div);
         if (div !== null) {
           var classic = document.getElementById("classic");
           var premium = document.getElementById("premium");
@@ -175,7 +175,7 @@
           } else if (royal.checked) {
             value = royal.value;
           }
-          console.log(`1. The value is ${value}`);
+          // console.log(`1. The value is ${value}`);
           var tru_value = parseFloat(value);
 
           var ten = document.getElementById("10");
@@ -192,7 +192,7 @@
 
           total.innerHTML = `Total:  $${new_value}`;
           div.appendChild(total);
-          console.log(`2. The value is ${new_value}`);
+          // console.log(`2. The value is ${new_value}`);
           // alert(`Your total cost is $${new_value}`);
         }
       }
@@ -215,7 +215,7 @@
           } else if (royal.checked) {
             value = royal.value;
           }
-          console.log(`1. The value is ${value}`);
+          // console.log(`1. The value is ${value}`);
           var tru_value = parseFloat(value);
 
           var ten = document.getElementById("10");
